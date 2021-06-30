@@ -1,0 +1,7 @@
+@import './variables';
+@import './mixins';
+@import './placeholders';
+
+body {
+    background-color: $ocean_blue;
+}
