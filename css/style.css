@@ -1,3 +1,123 @@
+.shrikhand {
+  font-family: "Shrikhand", cursive;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
-  background-color: #458efc;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+.header__logo {
+  width: 200px;
+  margin-top: 10px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background-color: #eaeaea;
+  box-shadow: inset 0px 13px 24px -17px #616161;
+}
+.location__icon {
+  margin: 0 20px 0 -20px;
+}
+.location__text {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.informations {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  font-size: 1.1em;
+  height: 230px;
+  padding: 40px 10px;
+  background-color: #f6f6f6;
+}
+.informations__title {
+  margin: 0;
+}
+.informations__text {
+  margin: 15px 0;
+  color: #5f5f5f;
+}
+.informations__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 230px;
+  height: 50px;
+  border: 0px solid #9e3a88;
+  border-radius: 40px 40px 40px 40px;
+  background: linear-gradient(180deg, #e771da 35%, #a15adc 100%);
+  text-decoration: none;
+  color: white;
+}
+
+.operations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+  padding: 30px 20px 30px 25px;
+  margin-bottom: 30px;
+}
+.operations__steps {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 10px solid #f6f6f6;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #f6f6f6;
+  box-shadow: 0px 10px 13px -7px #c7c7c7;
+}
+.operations__steps__number {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: -20px;
+  text-align: center;
+  background-color: #9356DC;
+  border: 3px solid #9356DC;
+  border-radius: 40px 40px 40px 40px;
+  color: white;
+}
+.operations__steps__description {
+  margin-left: 25px;
+  font-weight: bold;
+}
+.operations__steps__icon {
+  display: flex;
+  justify-content: center;
+  width: 20px;
+  color: grey;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+  padding: 30px 20px;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=style.css.map */
