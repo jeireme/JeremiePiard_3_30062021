@@ -127,11 +127,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 350px;
+    height: 500px;
     padding: 30px 20px;
     margin-bottom: 30px;
     &__cards {
-        /** /!\ TU ETAIS EN TRAIN DONNER UNE DIMENSION A TES CARDS
+        /* /!\ TU ETAIS EN TRAIN DONNER UNE DIMENSION A TES CARDS */
+        height: 200px;
     }
 }
 
