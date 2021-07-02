@@ -129,6 +129,7 @@ a {
   flex-direction: column;
   margin-bottom: 20px;
   box-shadow: 0px 10px 13px -7px #c7c7c7;
+  border-radius: 0 0 15px 15px;
 }
 .restaurants__card__img {
   border-radius: 15px 15px 0 0;
@@ -156,6 +157,7 @@ a {
 
 .footer {
   background-color: #353535;
+  height: 170px;
   padding: 23px;
   color: white;
 }
