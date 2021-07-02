@@ -12,6 +12,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -50,6 +55,7 @@ body {
   font-size: 1.1em;
   height: 230px;
   padding: 40px 10px;
+  margin: 0;
   background-color: #f6f6f6;
 }
 .informations__title {
@@ -76,15 +82,15 @@ body {
 .operations {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 350px;
   padding: 30px 20px 30px 25px;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
 }
 .operations__steps {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 20px;
   border: 10px solid #f6f6f6;
   border-radius: 20px 20px 20px 20px;
   background-color: #f6f6f6;
@@ -96,8 +102,8 @@ body {
   position: relative;
   left: -20px;
   text-align: center;
-  background-color: #9356DC;
-  border: 3px solid #9356DC;
+  background-color: #9356dc;
+  border: 3px solid #9356dc;
   border-radius: 40px 40px 40px 40px;
   color: white;
 }
@@ -113,31 +119,67 @@ body {
 }
 
 .restaurants {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 30px 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
-.restaurants__cards {
-  /* MODIFICATION DES CARDS */
+.restaurants__card {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 13px -7px #c7c7c7;
 }
-.restaurants__cards__img {
+.restaurants__card__img {
   border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 200px;
-  width: 100%;
+  height: 180px;
 }
-.restaurants__cards__description {
+.restaurants__card__description {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 0 0 15px 15px;
   background-color: white;
+  border-radius: 0 0 15px 15px;
   height: 80px;
-  width: 100%;
+  padding: 0 20px 0 10px;
+}
+.restaurants__card__description__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.restaurants__card__description__text--margin {
+  margin: 3px;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 23px;
+  color: white;
+}
+.footer__header {
+  font-family: "Shrikhand", cursive;
+  font-size: larger;
+  padding-bottom: 15px;
+}
+.footer__icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25px;
+}
+.footer div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+}
+.footer p {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

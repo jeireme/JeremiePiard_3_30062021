@@ -7,7 +7,7 @@
   font-family: "Shrikhand", cursive;
 }
 
-// Textes :
+// Textes
 .roboto {
   font-family: "Roboto", sans-serif;
 }
@@ -16,6 +16,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 .header {
@@ -56,6 +61,7 @@ body {
   font-size: 1.1em;
   height: 230px;
   padding: 40px 10px;
+  margin: 0;
   background-color: #f6f6f6;
   &__title {
     margin: 0;
@@ -86,71 +92,105 @@ body {
 .operations {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 350px;
   padding: 30px 20px 30px 25px;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   &__steps {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 20px;
     border: 10px solid #f6f6f6;
     border-radius: 20px 20px 20px 20px;
     background-color: #f6f6f6;
     box-shadow: 0px 10px 13px -7px rgb(199, 199, 199);
     &__number {
-        width: 20px;
-        height: 20px;
-        position:relative;
-        left: -20px;
-        text-align: center;
-        background-color: #9356DC;
-        border: 3px solid #9356DC;
-        border-radius: 40px 40px 40px 40px;
-        color: white;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      left: -20px;
+      text-align: center;
+      background-color: #9356dc;
+      border: 3px solid #9356dc;
+      border-radius: 40px 40px 40px 40px;
+      color: white;
     }
     &__description {
-        margin-left: 25px;
-        font-weight: bold;
+      margin-left: 25px;
+      font-weight: bold;
     }
     &__icon {
-        display: flex;
-        justify-content: center;
-        width: 20px;
-        color: grey;
+      display: flex;
+      justify-content: center;
+      width: 20px;
+      color: grey;
     }
   }
 }
 
 .restaurants {
-    background-color: #F6F6F6;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  margin-bottom: 10px;
+  &__card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 30px 20px;
-    margin-bottom: 30px;
-    &__cards {
-        /* MODIFICATION DES CARDS */
+    margin-bottom: 20px;
+    box-shadow: 0px 10px 13px -7px rgb(199, 199, 199);
+    &__img {
+      border-radius: 15px 15px 0 0;
+      object-fit: cover;
+      height: 180px;
+    }
+    &__description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      border-radius: 0 0 15px 15px;
+      height: 80px;
+      padding: 0 20px 0 10px;
+      &__text {
         display: flex;
         flex-direction: column;
-
-        &__img {
-          border-radius: 15px 15px 0 0;
-          object-fit: cover;
-          height: 200px;
-          width: 100%;
+        justify-content: center;
+        &--margin {
+          margin: 3px;
         }
-        &__description {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          border-radius: 0 0 15px 15px;
-          background-color: white;
-          height: 80px;
-          width: 100%;
-          // je modifie le code
-        }
+      }
     }
+  }
+}
+
+.footer {
+  background-color: #353535;
+  padding: 23px;
+  color: white;
+  &__header {
+    font-family: "Shrikhand", cursive;
+    font-size: larger;
+    padding-bottom: 15px;
+  }
+  &__icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25px;
+  }
+  div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30px;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin: 0;
+  }
 }
 
 // IPHONE : @media screen and (max-width: 767px) { }
