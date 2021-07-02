@@ -123,7 +123,6 @@ a {
   display: flex;
   flex-direction: column;
   padding: 30px 20px;
-  margin-bottom: 10px;
 }
 .restaurants__card {
   display: flex;
