@@ -28,6 +28,23 @@ a {
   width: 200px;
   margin-top: 10px;
 }
+.header__returnBtn {
+  position: absolute;
+  top: 38px;
+  left: 20px;
+}
+
+.banner {
+  height: 240px;
+}
+.banner__img {
+  position: absolute;
+  z-index: -1;
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .location {
   display: flex;
@@ -79,14 +96,14 @@ a {
   color: white;
 }
 
-.operations {
+.tutorial {
   display: flex;
   flex-direction: column;
   height: 350px;
   padding: 30px 20px 30px 25px;
   margin: 0 0 30px 0;
 }
-.operations__steps {
+.tutorial__steps {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -96,7 +113,7 @@ a {
   background-color: #f6f6f6;
   box-shadow: 0px 10px 13px -7px #c7c7c7;
 }
-.operations__steps__number {
+.tutorial__steps__number {
   width: 20px;
   height: 20px;
   position: relative;
@@ -107,11 +124,11 @@ a {
   border-radius: 40px 40px 40px 40px;
   color: white;
 }
-.operations__steps__description {
+.tutorial__steps__description {
   margin-left: 25px;
   font-weight: bold;
 }
-.operations__steps__icon {
+.tutorial__steps__icon {
   display: flex;
   justify-content: center;
   width: 20px;
@@ -153,6 +170,81 @@ a {
 }
 .restaurants__card__description__text--margin {
   margin: 3px;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  padding: 10px 15px;
+}
+.menu__header {
+  font-family: "Shrikhand", cursive;
+  font-size: larger;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 17px 0 7px;
+}
+.menu__title {
+  padding-left: 7px;
+  font-weight: normal;
+  color: #666565;
+}
+.menu__title::after {
+  content: "";
+  display: block;
+  margin: 0;
+  width: 47px;
+  height: 0px;
+  padding-top: 5px;
+  border-bottom: 3px solid #99e2d0;
+}
+.menu__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 10px 13px -10px #c7c7c7;
+  border-radius: 15px;
+  height: 80px;
+  padding: 0 20px 0 10px;
+}
+.menu__description__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__description__text--margin {
+  margin: 3px;
+}
+.menu__description__price {
+  padding-top: 28px;
+  font-weight: bold;
+}
+.menu__container {
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu__order {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 40px 0;
+}
+.menu__order__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  border: 0px solid #9e3a88;
+  border-radius: 40px 40px 40px 40px;
+  box-shadow: 0px 10px 13px -2px #c7c7c7;
+  background: linear-gradient(180deg, #e771da 35%, #a15adc 100%);
 }
 
 .footer {
