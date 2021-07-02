@@ -117,11 +117,27 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 500px;
   padding: 30px 20px;
   margin-bottom: 30px;
 }
 .restaurants__cards {
-  /* /!\ TU ETAIS EN TRAIN DONNER UNE DIMENSION A TES CARDS */
+  /* MODIFICATION DES CARDS */
+  display: flex;
+  flex-direction: column;
+}
+.restaurants__cards__img {
+  border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 200px;
+  width: 100%;
+}
+.restaurants__cards__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 15px 15px;
+  background-color: white;
+  height: 80px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

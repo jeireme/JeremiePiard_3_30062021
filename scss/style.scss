@@ -127,19 +127,31 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 500px;
     padding: 30px 20px;
     margin-bottom: 30px;
     &__cards {
-        /* /!\ TU ETAIS EN TRAIN DONNER UNE DIMENSION A TES CARDS */
-        height: 200px;
+        /* MODIFICATION DES CARDS */
+        display: flex;
+        flex-direction: column;
+
+        &__img {
+          border-radius: 15px 15px 0 0;
+          object-fit: cover;
+          height: 200px;
+          width: 100%;
+        }
+        &__description {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 0 0 15px 15px;
+          background-color: white;
+          height: 80px;
+          width: 100%;
+        }
     }
 }
 
-// Responsive iPhone
-@media screen and (max-width: 767px) {
-}
+// IPHONE : @media screen and (max-width: 767px) { }
 
-// TABLET :
-// @media screen and (min-width: 768px) and (max-width: 1366px) {
-// }
+// TABLET : @media screen and (min-width: 768px) and (max-width: 1366px) { }
