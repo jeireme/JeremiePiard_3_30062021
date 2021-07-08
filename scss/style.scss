@@ -18,7 +18,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-a {
+main a {
   color: black;
   text-decoration: none;
 }
@@ -48,6 +48,15 @@ a {
     height: 300px;
     width: 100%;
     object-fit: cover;
+    &--larger {
+      display: none;
+    }
+    @media screen and (min-width: 1000px) {
+      display: none;
+      &--larger {
+        display: block;
+      }
+    }
   }
 }
 
@@ -71,11 +80,11 @@ a {
 .informations {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   text-align: center;
   font-size: 1.1em;
-  height: 230px;
+  height: 200px;
   padding: 40px 10px;
   margin: 0;
   background-color: #f6f6f6;
@@ -108,9 +117,20 @@ a {
 .tutorial {
   display: flex;
   flex-direction: column;
-  height: 350px;
+  // height: 350px;
   padding: 30px 20px 30px 25px;
   margin: 0 0 30px 0;
+  @media screen and (min-width: 1000px) {
+    max-width: 1500px;
+    margin: auto;
+  }
+  &__container {
+    @media screen and (min-width: 1000px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
   &__steps {
     display: flex;
     justify-content: flex-start;
@@ -120,6 +140,9 @@ a {
     border-radius: 20px 20px 20px 20px;
     background-color: #f6f6f6;
     box-shadow: 0px 10px 13px -7px rgb(199, 199, 199);
+    @media screen and (min-width: 1000px) {
+      width: 30%;
+    }
     &__number {
       width: 20px;
       height: 20px;
@@ -149,6 +172,20 @@ a {
   display: flex;
   flex-direction: column;
   padding: 30px 20px;
+  @media screen and (min-width: 1000px) {
+    height: 630px;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  &__container {
+    @media screen and (min-width: 1000px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
   &__card {
     display: flex;
     flex-direction: column;
@@ -177,6 +214,22 @@ a {
         }
       }
     }
+    @media screen and (min-width: 1000px) {
+      width: 49.2%;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    &__background {
+      // background-color: blue;
+      background-color: #f6f6f6;
+      position: absolute;
+      z-index: -2;
+      width: 100%;
+      height: 690px;
+      margin-top: -30px;
+      left: 0;
+      right: 0;
+    }
   }
 }
 
@@ -184,56 +237,113 @@ a {
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
   padding: 10px 15px;
-  // position: relative;
-  // top: -65px;
+  @media screen and (min-width: 1000px) {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
   &__header {
     font-family: "Shrikhand", cursive;
-    // font-size: larger;
+    font-size: larger;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 17px 0 7px;
+    @media screen and (min-width: 1000px) {
+      padding: 0 45px 0 7px;
+      h1 {
+        // background-color: red;
+        position: relative;
+        margin: 35px auto;
+        left: 35px;
+      }
+    }
+  }
+  &__cards__container {
+    margin-bottom: 20px;
+    @media screen and (min-width: 1000px) {
+      // background-color: purple;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+      margin-bottom: 20px;
+      // background-color: grey; //////////////////////////
+    }
+  }
+  &__card {
+    margin-bottom: 40px;
+    @media screen and (min-width: 1000px) {
+      margin: 0 10px;
+      // background-color: pink; ////////////// PINK
+      width: 30%; // be careful, if you change this you break the ellipse
+    }
   }
   &__title {
     padding-left: 7px;
     font-weight: normal;
     color: rgb(102, 101, 101);
     &::after {
-    content: "";
-    display: block;
-    margin: 0;
-    width: 47px;
-    height: 0px;
-    padding-top: 5px;
-    border-bottom: 3px solid #99e2d0;
+      content: "";
+      display: block;
+      margin: 0;
+      width: 47px;
+      height: 0px;
+      padding-top: 5px;
+      border-bottom: 3px solid #99e2d0;
     }
   }
   &__description {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white; //white
+    background-color: white;
     box-shadow: 0px 10px 13px -10px rgb(199, 199, 199);
-
     border-radius: 15px;
     height: 80px;
     padding: 0 20px 0 10px;
+    // background-color: red; ////////////////////
     &__text {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      // 3 dots
+      // flex:1;
+      // background-color: blue; //////////////
+      width: 100%;
+      min-width: 0;
+
       &--margin {
         margin: 3px;
+
+        // 3 dots
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
     &__price {
+      // background-color: green;/////////////
       padding-top: 28px;
       font-weight: bold;
+      // 3 dots
+      white-space: nowrap;
+      width: 30px;
+
+      > p {
+        display: inline-block;
+      }
     }
   }
   &__container {
     // background-color: red;
     height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__container--bigger {
+    // background-color: red;
+    height: 365px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -265,13 +375,18 @@ a {
 
 .footer {
   background-color: #353535;
-  height: 170px;
-  padding: 23px;
-  color: white;
+  height: 210px;
+  padding: 0px 25px;
+  @media screen and (min-width: 1000px) {
+    max-width: 1490px;
+    margin: 0 auto;
+  }
   &__header {
     font-family: "Shrikhand", cursive;
     font-size: larger;
-    padding-bottom: 15px;
+    color: white;
+    padding-top: 25px;
+    margin: 0 0 15px 0;
   }
   &__icon {
     display: flex;
@@ -279,17 +394,34 @@ a {
     align-items: center;
     width: 25px;
   }
-  div {
+  &__container {
+    // background-color: red;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    text-decoration: none;
+    color: white;
     height: 30px;
   }
-  p {
+  &__links {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: white;
     height: 30px;
     margin: 0;
+  }
+  @media screen and (min-width: 1000px) {
+    &__background {
+      background-color: #353535;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 210px;
+      left: 0;
+      right: 0;
+      margin: 0;
+    }
   }
 }
 
