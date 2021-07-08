@@ -41,12 +41,12 @@ main a {
 }
 
 .banner {
-  height: 240px;
+  height: 180px;
 }
 .banner__img {
   position: absolute;
   z-index: -1;
-  height: 300px;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;

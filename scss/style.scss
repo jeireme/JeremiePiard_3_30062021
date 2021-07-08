@@ -45,11 +45,11 @@ main a {
 }
 
 .banner {
-  height: 240px;
+  height: 180px;
   &__img {
     position: absolute;
     z-index: -1;
-    height: 300px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     &--larger {
@@ -59,6 +59,7 @@ main a {
       display: none;
       &--larger {
         display: block;
+
       }
     }
   }
@@ -303,34 +304,34 @@ main a {
 }
 
 .reveal-delay-1 {
-  animation: reveal 1s 0s forwards; // ANIMATIONNNNNNNNNNNNNNNNNNNNNNNN
+  animation: reveal 1s 0s forwards;
 }
 .reveal-delay-2 {
-  animation: reveal 1s 0.1s forwards; // ANIMATIONNNNNNNNNNNNNNNNNNNNNNNN
+  animation: reveal 1s 0.1s forwards;
 }
 .reveal-delay-3 {
-  animation: reveal 1s 0.2s forwards;  // ANIMATIONNNNNNNNNNNNNNNNNNNNNNNN
+  animation: reveal 1s 0.2s forwards;
 }
 .reveal-delay-4 {
-  animation: reveal 1s 0.3s forwards; // ANIMATIONNNNNNNNNNNNNNNNNNNNNNNN
+  animation: reveal 1s 0.3s forwards;
 }
 .reveal-delay-5 {
-  animation: reveal 1s 0.4s forwards; // ANIMATIONNNNNNNNNNNNNNNNNNNNNNNN
+  animation: reveal 1s 0.4s forwards;
 }
 .reveal-delay-6 {
-  animation: reveal 1s 0.5s forwards; // ANIMATIONNNNNNNNNNNNNNNNNNNNNNNN
+  animation: reveal 1s 0.5s forwards;
 }
 .reveal-delay-7 {
-  animation: reveal 1s 0.6s forwards; // ANIMATIONNNNNNNNNNNNNNNNNNNNNNNN
+  animation: reveal 1s 0.6s forwards;
 }
 .reveal-delay-8 {
-  animation: reveal 1s 0.7s forwards; // ANIMATIONNNNNNNNNNNNNNNNNNNNNNNN
+  animation: reveal 1s 0.7s forwards;
 }
 .reveal-delay-9 {
-  animation: reveal 1s 0.8s forwards; // ANIMATIONNNNNNNNNNNNNNNNNNNNNNNN
+  animation: reveal 1s 0.8s forwards;
 }
 .reveal-delay-10 {
-  animation: reveal 1s 0.9s forwards; // ANIMATIONNNNNNNNNNNNNNNNNNNNNNNN
+  animation: reveal 1s 0.9s forwards;
 }
 
 .menu {
