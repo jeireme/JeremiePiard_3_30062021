@@ -143,7 +143,6 @@ main a {
 .tutorial {
   display: flex;
   flex-direction: column;
-  // height: 350px;
   padding: 30px 20px 30px 25px;
   margin: 0 0 30px 0;
   @media screen and (min-width: 1000px) {
@@ -193,6 +192,25 @@ main a {
   }
 }
 
+.heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &__animated {
+    color: rgb(255, 104, 129);
+    position: absolute;
+    font-size: 28.7px;
+    -webkit-text-stroke-width: 2.9px;
+    -webkit-text-stroke-color: black;
+    transition: opacity 0.5s;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
 .restaurants {
   background-color: #f6f6f6;
   display: flex;
@@ -219,7 +237,7 @@ main a {
     margin-bottom: 20px;
     box-shadow: 0px 10px 13px -7px rgb(199, 199, 199);
     border-radius: 0 0 15px 15px;
-    
+
     transition: transform 0.3s;
     &:hover {
       transform: scale(1.025);
@@ -261,7 +279,6 @@ main a {
   }
   @media screen and (min-width: 1000px) {
     &__background {
-      // background-color: blue;
       background-color: #f6f6f6;
       position: absolute;
       z-index: -2;
@@ -289,10 +306,9 @@ main a {
     align-items: center;
     padding: 0 17px 0 7px;
     @media screen and (min-width: 1000px) {
-      font-size: larger;
-      padding: 0 45px 0 7px;
+      padding: 0 50px 0 7px;
       h1 {
-        // background-color: red;
+        font-size: 2.3em;
         position: relative;
         margin: 35px auto;
         left: 35px;
@@ -302,19 +318,17 @@ main a {
   &__cards__container {
     margin-bottom: 20px;
     @media screen and (min-width: 1000px) {
-      // background-color: purple;
       display: flex;
       justify-content: space-between;
       padding: 0 30px;
       margin-bottom: 20px;
-      // background-color: grey; //////////////////////////
     }
   }
   &__card {
     margin-bottom: 40px;
     @media screen and (min-width: 1000px) {
       margin: 0 10px;
-      width: 30%; // be careful, if you change this you break the ellipse
+      width: 30%;
     }
   }
   &__title {
@@ -340,49 +354,36 @@ main a {
     border-radius: 15px;
     height: 80px;
     padding: 0 20px 0 10px;
-    // background-color: red; ////////////////////
     &__text {
       display: flex;
       flex-direction: column;
       justify-content: center;
-
-      // 3 dots
-      // flex:1;
-      // background-color: blue; //////////////
       width: 100%;
       min-width: 0;
-
       &--margin {
         margin: 3px;
-
-        // 3 dots
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }
     }
     &__price {
-      // background-color: green;/////////////
       padding-top: 28px;
       font-weight: bold;
-      // 3 dots
       white-space: nowrap;
       width: 30px;
-
       > p {
         display: inline-block;
       }
     }
   }
   &__container {
-    // background-color: red;
     height: 270px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   &__container--bigger {
-    // background-color: red;
     height: 365px;
     display: flex;
     flex-direction: column;
@@ -412,7 +413,6 @@ main a {
         rgba(231, 113, 218, 1) 35%,
         rgba(161, 90, 220, 1) 100%
       );
-      ///////////////////////////////////////////////
       transition: opacity 0.5s;
       position: relative;
       &:before {
@@ -436,8 +436,6 @@ main a {
       &:hover::before {
         opacity: 1;
       }
-
-      //////////////////////////////////////////////////////
     }
   }
 }
@@ -464,7 +462,6 @@ main a {
     width: 25px;
   }
   &__container {
-    // background-color: red;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -493,7 +490,3 @@ main a {
     }
   }
 }
-
-// IPHONE : @media screen and (max-width: 767px) { }
-
-// TABLET : @media screen and (min-width: 768px) and (max-width: 1366px) { }
