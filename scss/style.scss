@@ -198,7 +198,6 @@ main a {
   align-items: center;
   position: relative;
   &__animated {
-    // color: rgb(255, 104, 129); // other color
     color: #D36BDB;
     position: absolute;
     font-size: 28.7px;
@@ -413,44 +412,34 @@ main a {
       }
     }
     &__price {
-      // transform-origin: 100% 50%;
-      // transition: transform 1000ms;
       padding-top: 28px;
+      margin-left: 5px;
       font-weight: bold;
       white-space: nowrap;
-      width: 30px;
-      > p {
-        display: inline-block;
-      }
+      width: 40px;
+      display: inline-block;
     }
     &:hover {
-      // .menu__description__price {
-      //   transform: translateX(-120px);
-      // }
       .menu__description__hidden {
-        transform: translateX(-90px);
+        margin-right: -20px;
       }
       .check_animated {
         transform: rotate(-360deg);
       }
     }
     &__hidden {
-      ///////////////////////////////////////////// la coche
-      // transform-origin: 100% 50%;
-      transition: transform 0.5s;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #8edec9;
       color: white;
-      margin-left: 20px;
-      margin-right: -110px;
-      // border-radius: 0 15px 15px 0;
+      margin-left: 10px;
+      margin-right: -105px;      
+      transition: margin-right 0.45s ;
       height: 100%;
-      width: 90px;
-
+      min-width: 80px;
       .check_animated {
-        transition: transform 0.5s;
+        transition: transform 0.45s;
       }
     }
   }
