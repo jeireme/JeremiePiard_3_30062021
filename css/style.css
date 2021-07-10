@@ -28,13 +28,14 @@ main a {
   width: 200px;
   margin-top: 10px;
 }
-.header__returnBtn {
+.header__return {
   position: absolute;
+  color: black;
   top: 38px;
   left: 20px;
 }
 @media screen and (min-width: 1000px) {
-  .header__returnBtn {
+  .header__return {
     top: 35px;
     left: 40px;
   }
@@ -568,7 +569,7 @@ main a {
   color: white;
   height: 30px;
 }
-.footer__links {
+.footer__row {
   display: flex;
   align-items: center;
   text-decoration: none;
