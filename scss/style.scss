@@ -1,21 +1,10 @@
 @import "utils/variables";
 @import "utils/mixins";
-@import "utils/placeholders";
-
-// Logo et Titres
-.shrikhand {
-  font-family: "Shrikhand", cursive;
-}
-
-// Textes
-.roboto {
-  font-family: "Roboto", sans-serif;
-}
 
 body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
 }
 
 main a {
@@ -24,14 +13,12 @@ main a {
 }
 
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   height: 80px;
   width: 100%;
   &__logo {
-    width: 200px;
     margin-top: 10px;
+    width: 200px;
   }
   &__return {
     position: absolute;
@@ -48,11 +35,11 @@ main a {
 .banner {
   height: 180px;
   &__img {
+    object-fit: cover;
     position: absolute;
     z-index: -1;
     height: 100%;
     width: 100%;
-    object-fit: cover;
     &--larger {
       display: none;
     }
@@ -66,13 +53,11 @@ main a {
 }
 
 .location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   height: 60px;
   width: 100%;
-  background-color: #eaeaea;
-  box-shadow: inset 0px 13px 24px -17px #616161;
+  background-color: $location-background;
+  box-shadow: inset 0px 13px 24px -17px $anchor-grey;
   &__icon {
     margin: 0 20px 0 -20px;
   }
@@ -83,57 +68,51 @@ main a {
 }
 
 .informations {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include flexColumnCenter;
+  background-color: $light-grey;
   align-items: center;
   text-align: center;
+  padding: 40px 10px;
   font-size: 1.1em;
   height: 200px;
-  padding: 40px 10px;
   margin: 0;
-  background-color: #f6f6f6;
   &__title {
     margin: 0;
   }
   &__text {
+    color: $anchor-grey;
     margin: 15px 0;
-    color: #5f5f5f;
   }
   &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
+    position: relative;
     margin-top: 20px;
     width: 230px;
     height: 50px;
-    border: 0px solid #9e3a88;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.5s;
     border-radius: 40px 40px 40px 40px;
     background: linear-gradient(
       180deg,
       rgba(231, 113, 218, 1) 35%,
       rgba(161, 90, 220, 1) 100%
     );
-    text-decoration: none;
-    color: white;
-    transition: opacity 0.5s;
-    position: relative;
     &:before {
+      @include flexCenter;
       content: "Explorer nos restaurants";
       position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 100%;
       height: 100%;
+      opacity: 0;
+      transition: 0.5s;
       border-radius: 40px 40px 40px 40px;
       background: linear-gradient(
         180deg,
         rgb(250, 134, 240) 50%,
         rgb(166, 93, 226) 100%
       );
-      transition: 0.5s;
-      opacity: 0;
+      
     }
     &:hover::before {
       opacity: 1;
@@ -152,33 +131,29 @@ main a {
   }
   &__container {
     @media screen and (min-width: 1000px) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      @include flexRowBetween;
     }
   }
   &__steps {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flexStartCenter;
     margin-bottom: 20px;
-    border: 10px solid #f6f6f6;
+    background-color: $light-grey;
+    border: 10px solid $light-grey;
     border-radius: 20px 20px 20px 20px;
-    background-color: #f6f6f6;
-    box-shadow: 0px 10px 13px -7px rgb(199, 199, 199);
+    box-shadow: 0px 10px 13px -7px $shadow;
     @media screen and (min-width: 1000px) {
       width: 30%;
     }
     &__number {
+      position: relative;
+      text-align: center;
+      color: white;
+      left: -20px;
       width: 20px;
       height: 20px;
-      position: relative;
-      left: -20px;
-      text-align: center;
-      background-color: #9356dc;
-      border: 3px solid #9356dc;
+      background-color: $color-primary;
+      border: 3px solid $color-primary;
       border-radius: 40px 40px 40px 40px;
-      color: white;
     }
     &__description {
       margin-left: 25px;
@@ -187,19 +162,17 @@ main a {
     &__icon {
       display: flex;
       justify-content: center;
-      width: 20px;
       color: grey;
+      width: 20px;
     }
   }
 }
 
 .heart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   position: relative;
   &__animated {
-    color: #d36bdb;
+    color: $orchid;
     position: absolute;
     font-size: 28.7px;
     -webkit-text-stroke-width: 2.9px;
@@ -213,20 +186,18 @@ main a {
 }
 
 .restaurants {
-  background-color: #f6f6f6;
+  background-color: $light-grey;
   display: flex;
   flex-direction: column;
   padding: 30px 20px;
   @media screen and (min-width: 1000px) {
-    height: 630px;
     max-width: 1500px;
+    height: 630px;
     margin: 0 auto;
   }
   &__container {
     @media screen and (min-width: 1000px) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      @include flexRowBetween;
       align-items: center;
       flex-wrap: wrap;
     }
@@ -236,21 +207,20 @@ main a {
     flex-direction: column;
     position: relative;
     margin-bottom: 20px;
-    box-shadow: 0px 10px 13px -7px rgb(199, 199, 199);
+    box-shadow: 0px 10px 13px -7px $shadow;
     border-radius: 0 0 15px 15px;
-
     transition: transform 0.3s;
     &:hover {
       transform: scale(1.025);
     }
     &__new {
-      background-color: #99e2d0;
-      color: #028867;
+      background-color: $color-tertiary;
+      color: $forest-green;
       width: max-content;
       position: absolute;
-      right: 15px;
       padding: 10px 15px;
       border-radius: 5px;
+      right: 15px;
     }
     &__img {
       border-radius: 15px 15px 0 0;
@@ -258,17 +228,13 @@ main a {
       height: 180px;
     }
     &__description {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flexBetweenCenter;
       background-color: white;
       border-radius: 0 0 15px 15px;
-      height: 80px;
       padding: 0 20px 0 10px;
+      height: 80px;
       &__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flexColumnCenter;
         &--margin {
           margin: 3px;
         }
@@ -280,14 +246,14 @@ main a {
   }
   @media screen and (min-width: 1000px) {
     &__background {
-      background-color: #f6f6f6;
+      background-color: $light-grey;
       position: absolute;
       z-index: -2;
+      left: 0;
+      right: 0;
       width: 100%;
       height: 690px;
       margin-top: -30px;
-      left: 0;
-      right: 0;
     }
   }
 }
@@ -303,39 +269,14 @@ main a {
   }
 }
 
-.reveal-delay-1 {
-  animation: reveal 1s 0.2s forwards;
-}
-.reveal-delay-2 {
-  animation: reveal 1s 0.3s forwards;
-}
-.reveal-delay-3 {
-  animation: reveal 1s 0.4s forwards;
-}
-.reveal-delay-4 {
-  animation: reveal 1s 0.5s forwards;
-}
-.reveal-delay-5 {
-  animation: reveal 1s 0.6s forwards;
-}
-.reveal-delay-6 {
-  animation: reveal 1s 0.7s forwards;
-}
-.reveal-delay-7 {
-  animation: reveal 1s 0.8s forwards;
-}
-.reveal-delay-8 {
-  animation: reveal 1s 0.9s forwards;
-}
-.reveal-delay-9 {
-  animation: reveal 1s 1.0s forwards;
-}
-.reveal-delay-10 {
-  animation: reveal 1s 1.1s forwards;
+@for $i from 1 through 10 {
+  .reveal-delay-#{$i} {
+    animation: reveal 1s (($i + 1) * 0.2s) forwards;
+  }
 }
 
 .menu {
-  background-color: #f6f6f6;
+  background-color: $light-grey;
   border-radius: 40px 40px 0 0;
   padding: 10px 15px;
   @media screen and (min-width: 1000px) {
@@ -343,17 +284,15 @@ main a {
     margin: 0 auto;
   }
   &__header {
+    @include flexBetweenCenter;
     font-family: "Shrikhand", cursive;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 17px 0 7px;
     @media screen and (min-width: 1000px) {
       padding: 0 50px 0 7px;
       h1 {
-        font-size: 2.3em;
         position: relative;
         margin: 35px auto;
+        font-size: 2.3em;
         left: 35px;
       }
     }
@@ -363,8 +302,8 @@ main a {
     @media screen and (min-width: 1000px) {
       display: flex;
       justify-content: space-between;
-      padding: 0 30px;
       margin-bottom: 20px;
+      padding: 0 30px;
     }
   }
   &__card {
@@ -375,50 +314,46 @@ main a {
     }
   }
   &__title {
-    padding-left: 7px;
+    color: $anchor-grey;
     font-weight: normal;
-    color: rgb(102, 101, 101);
+    padding-left: 7px;
     &::after {
       content: "";
       display: block;
-      margin: 0;
       width: 47px;
       height: 0px;
+      margin: 0;
       padding-top: 5px;
-      border-bottom: 3px solid #99e2d0;
+      border-bottom: 3px solid $color-tertiary;
     }
   }
   &__description {
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexBetweenCenter;
     background-color: white;
+    overflow: hidden;
     opacity: 0;
-    box-shadow: 0px 10px 13px -10px rgb(199, 199, 199);
+    box-shadow: 0px 10px 13px -10px $shadow;
+    padding: 0 20px 0 10px;
     border-radius: 15px;
     height: 80px;
-    padding: 0 20px 0 10px;
     &__text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
+      @include flexColumnCenter;
       min-width: 0;
+      width: 100%;
       &--margin {
         margin: 3px;
+        text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
       }
     }
     &__price {
+      display: inline-block;
+      white-space: nowrap;
+      font-weight: bold;
       padding-top: 28px;
       margin-left: 5px;
-      font-weight: bold;
-      white-space: nowrap;
       width: 40px;
-      display: inline-block;
     }
     &:hover {
       .menu__description__hidden {
@@ -429,10 +364,8 @@ main a {
       }
     }
     &__hidden {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #8edec9;
+      @include flexCenter;
+      background-color: $color-tertiary;
       color: white;
       margin-left: 10px;
       margin-right: -105px;
@@ -445,16 +378,12 @@ main a {
     }
   }
   &__container {
+    @include flexColumnBetween;
     height: 270px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
   &__container--bigger {
+    @include flexColumnBetween;
     height: 365px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
   &__order {
     display: flex;
@@ -464,41 +393,36 @@ main a {
       margin: 50px 0px 55px 0px;
     }
     &__btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexCenter;
       text-decoration: none;
       color: white;
       margin-top: 20px;
       width: 200px;
       height: 50px;
-      border: 0px solid #9e3a88;
       border-radius: 40px 40px 40px 40px;
-      box-shadow: 0px 10px 13px -2px rgb(199, 199, 199);
+      box-shadow: 0px 10px 13px -2px $shadow;
+      transition: opacity 0.5s;
+      position: relative;
       background: linear-gradient(
         180deg,
         rgba(231, 113, 218, 1) 35%,
         rgba(161, 90, 220, 1) 100%
       );
-      transition: opacity 0.5s;
-      position: relative;
       &:before {
+        @include flexCenter;
         content: "Commander";
         position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         height: 100%;
         border-radius: 40px 40px 40px 40px;
-        box-shadow: 0px 10px 13px -2px rgb(206, 206, 206);
+        box-shadow: 0px 10px 13px -2px $shadow-hover;
+        transition: 0.5s;
+        opacity: 0;
         background: linear-gradient(
           180deg,
           rgb(250, 134, 240) 50%,
           rgb(166, 93, 226) 100%
         );
-        transition: 0.5s;
-        opacity: 0;
       }
       &:hover::before {
         opacity: 1;
@@ -508,13 +432,9 @@ main a {
 }
 
 .footer {
-  background-color: #353535;
+  background-color: $footer-background;
   height: 210px;
   padding: 0px 25px;
-  @media screen and (min-width: 1000px) {
-    max-width: 1490px;
-    margin: 0 auto;
-  }
   &__header {
     font-family: "Shrikhand", cursive;
     font-size: larger;
@@ -523,15 +443,11 @@ main a {
     margin: 0 0 15px 0;
   }
   &__icon {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flexStartCenter;
     width: 25px;
   }
   &__container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flexStartCenter;
     text-decoration: none;
     color: white;
     height: 30px;
@@ -545,8 +461,12 @@ main a {
     margin: 0;
   }
   @media screen and (min-width: 1000px) {
+    max-width: 1490px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1000px) {
     &__background {
-      background-color: #353535;
+      background-color: $footer-background;
       position: absolute;
       z-index: -1;
       width: 100%;
@@ -558,8 +478,7 @@ main a {
   }
 }
 
-// Loader generated with loading.io :
-
+// LOADER (generated with loading.io)
 @keyframes loading {
   0% {
     transform: rotate(0deg);
@@ -588,15 +507,13 @@ main a {
 }
 
 .loader__container {
+  @include flexCenter;
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.65);
+  background-color: $loader-background;
   animation: fading 2s 0s forwards;
 }
 
@@ -630,7 +547,7 @@ main a {
 }
 
 .loader > div div:nth-child(1) > div {
-  background: #9356dc;
+  background: $color-primary;
   transform: rotate(0deg);
 }
 
@@ -639,7 +556,7 @@ main a {
 }
 
 .loader > div div:nth-child(2) > div {
-  background: #ff79da;
+  background: $color-secondary;
   transform: rotate(0deg);
 }
 
@@ -648,7 +565,7 @@ main a {
 }
 
 .loader > div div:nth-child(3) > div {
-  background: #99e2d0;
+  background: $color-tertiary;
   transform: rotate(0deg);
 }
 
@@ -657,7 +574,7 @@ main a {
 }
 
 .loader > div div:nth-child(4) > div {
-  background: #9356dc;
+  background: $color-primary;
   transform: rotate(0deg);
 }
 
