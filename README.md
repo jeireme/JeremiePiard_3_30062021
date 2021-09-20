@@ -1,6 +1,6 @@
 # Ohmyfood
 - Voici le troisième projet du parcours Développeur Front-End d'OpenClassrooms
-- L'objectif était d'intégrer la maquette mobile d'une entreprise fictive : Ohmyfood, et d'enrichir leur site en animations visuelles
+- L'objectif était de créer le site d'une entreprise fictive : Ohmyfood, et de l'enrichir en animations visuelles
 
 - Pour visiter le site internet, suivez ce [lien](https://jeireme.github.io/JeremiePiard_3_30062021/)
 
