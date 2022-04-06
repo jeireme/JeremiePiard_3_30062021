@@ -4,10 +4,10 @@
 
 - Pour visiter le site internet, suivez ce [lien](https://jeireme.github.io/JeremiePiard_3_30062021/)
 
-![maquette ohmyfood](https://puu.sh/IcFRV/d4f899a657.jpg)
+![maquette ohmyfood](https://i.ibb.co/kgWXJX5/preview.jpg)
 
 # Animations
-![animation ohmyfood](https://puu.sh/IcGfA/d8d4fdde4f.gif)
+![animation ohmyfood](https://i.ibb.co/QkMX8vs/animations.gif)
 
 # Éléments fournis par l'entreprise
 - Maquette mobile, descriptions des animations
